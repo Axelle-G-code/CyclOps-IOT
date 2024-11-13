@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Tracking Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For Chart.js -->
+    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> <!-- For Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <h1>GPS Tracker</h1>
+    <button id="connectBtn">Connect to GPS</button>
+    <button id="startTrackingBtn" disabled>Start Tracking</button>
+    <button id="stopTrackingBtn" disabled>Stop Tracking</button>
+    <div id="map"></div>
+    <canvas id="chart"></canvas>
+</body>
+</html>

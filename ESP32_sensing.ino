@@ -17,8 +17,8 @@ ESP8266WiFiMulti wifiMulti;
 #define ECHO_PIN 18
 
 // WiFi Credentials
-#define WIFI_SSID "Blenheim"
-#define WIFI_PASSWORD "better21"
+#define WIFI_SSID "Pixel_1743"
+#define WIFI_PASSWORD "doudou123"
 
 // InfluxDB Configuration
 #define INFLUXDB_URL "https://us-east-1-1.aws.cloud2.influxdata.com"

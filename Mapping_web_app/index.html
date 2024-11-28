@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Navigation Web App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+</head>
+<body>
+  <nav>
+    <h1>Bike Navigation Web App</h1>
+  </nav>
+  <main>
+    <button onclick="connectBluetooth()">Connect to ESP32</button>
+    <p id="status">Not connected</p>
+    <input type="text" id="start" placeholder="Start Location" oninput="fetchSuggestions('start')">
+    <ul id="start-suggestions" class="suggestions"></ul>
+    <input type="text" id="end" placeholder="End Location" oninput="fetchSuggestions('end')">
+    <ul id="end-suggestions" class="suggestions"></ul>
+    <button onclick="getDirections()">Get Directions</button>
+    <div id="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 

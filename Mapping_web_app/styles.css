@@ -1,0 +1,77 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #00274d; /* Navy */
+    color: #ffffff; /* White */
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  button, input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #00274d; /* Navy border */
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #00274d; /* Navy */
+    color: #ffffff; /* White */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #003366; /* Slightly lighter navy */
+  }
+  
+  input {
+    width: calc(100% - 40px);
+    max-width: 500px;
+  }
+  
+  #map {
+    height: 500px;
+    width: 100%;
+    margin: 20px auto;
+    border: 3px solid #00274d; /* Navy border */
+    border-radius: 10px;
+  }
+  
+  /* Suggestions Dropdown */
+  .suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: calc(100% - 40px);
+    max-width: 500px;
+    border: 1px solid #ccc;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  .suggestions li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestions li:hover {
+    background-color: #e6e6e6;
+  }
+  

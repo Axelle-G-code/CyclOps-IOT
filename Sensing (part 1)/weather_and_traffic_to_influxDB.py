@@ -6,15 +6,15 @@ import time
 from datetime import datetime, timedelta
 
 #influxdb connection details (token, key and bucket name)
-INFLUXDB_TOKEN = "2jRrp5qcV2fAy-T4c8J8pp9JuP9UKEvQOnq1HPvoFDOQO938RIPfDaXRv1cG_RV56ii6O_AZHOGrC7G94qu9-w=="
-INFLUXDB_ORG = "329a35a426f6c11e"
+INFLUXDB_TOKEN = "hidden as flagged by Github security"
+INFLUXDB_ORG = "hidden as flagged by Github security"
 INFLUXDB_BUCKET = "Weather&traffic"
 INFLUXDB_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"
 
 WEATHER_API_URL = "https://api.open-meteo.com/v1/forecast?latitude=51.5074&longitude=-0.1278&current_weather=true&precipitation=true"
 
 # details for TomTom traffic API connection (key and url)
-TOMTOM_API_KEY = "XQTFC4uflckxoN5swXqDhmrNFTt52TfP"
+TOMTOM_API_KEY = "hidden as flagged by Github security"
 TOMTOM_API_URL = (
     f"https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=XQTFC4uflckxoN5swXqDhmrNFTt52TfP&point=51.5014,-0.1419"
 )

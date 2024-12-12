@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyclOPS Navigation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #0f9b0f, #55c057);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .input-section, .status-section, .graph-section, .weather-section {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .input-section input, .action-buttons button {
+            width: calc(45% - 1rem);
+            padding: 0.5rem;
+            margin: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .status-section button {
+            margin-bottom: 1rem; /* Add spacing between button and message */
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+            margin-top: 1rem;
+        }
+
+        .action-buttons button {
+            padding: 0.5rem 1rem;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .action-buttons button:hover {
+            background: #45a049;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 2rem;
+        }
+
+        .graph-section canvas {
+            display: block;
+            width: 100%;
+            height: 300px; /* Ensure fixed height */
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CyclOPS 🚴</h1>
+        <p>Keeping a safeguarding eye on your cycling</p>
+    </header>
+
+    <div class="container">
+        <!-- ESP32 Connection Section -->
+        <div class="status-section">
+            <button id="esp32-button" onclick="simulateESP32Connection()">Connect to ESP32</button>
+            <div class="status-item" id="esp32-status">ESP32 Not Connected</div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <h2>Plan Your Route</h2>
+            <input type="text" id="start-point" placeholder="Starting Point">
+            <input type="text" id="end-point" placeholder="Ending Point">
+            <div class="action-buttons">
+                <button id="map-route-button">Map Route</button>
+                <button id="start-journey-button">Start Journey</button>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map" id="map"></div>
+
+        <!-- Weather Section -->
+        <div class="weather-section input-section">
+            <h2>Current Weather</h2>
+            <div id="weather-area">Cloudy today: 7°C, 2mm precipitation</div>
+        </div>
+
+        <!-- Predicted Congestion Section -->
+        <div class="graph-section input-section">
+            <h2>Predicted Congestion</h2>
+            <div id="congestion-message">Medium congestion, consider leaving extra travel time.</div>
+            <canvas id="congestionGraph" width="400" height="300"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 CyclOPS. All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAozzAeYCn10RwHnLyeZyvfXie_imBdl1o&libraries=places"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,2 +1,2 @@
 CyclOps-
-Keeping a watchful eye on your cycling analytics.
+Keeping a safeguarding eye on your journeys using your cycling analytics
